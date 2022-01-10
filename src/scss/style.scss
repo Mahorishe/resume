@@ -1,0 +1,120 @@
+@import 'reset';
+@import 'fonts';
+@import 'vars';
+@import 'global';
+
+.resume{
+  &__inner{
+    padding: 30px;
+  }
+  &__top{
+    display: flex;
+    align-items: center;
+    border-bottom: 4px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    &-images{
+      height: 200px;
+      width: 200px;
+      margin-right: 200px;
+      img{
+        object-fit: cover;
+        width: 100%;
+        border-radius: 50%;
+        border: 2px solid #d8d8d8
+      }
+    }
+    &-name{
+      @extend %roboto-700;
+      text-transform: uppercase;
+      font-size: 48px;
+      letter-spacing: .2px;
+    }
+    &-position{
+      text-align: center;
+      @extend %roboto-500;
+      font-size: 30px;
+    }
+  }
+  &__content{
+    display: flex;
+  }
+  &__full-info{
+    width: 820px;
+    padding-right: 20px;
+    margin-right: 40px;
+  }
+  &__contacts{
+    &-item{
+      padding: 10px 0 10px 25px;
+    }
+    &-link{
+      color: #000;
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        left: -35px;
+        top: 2px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &-phone::before{
+      background-image: url('../images/icons/phone-solid.svg');
+    }
+    &-email::before{
+      background-image: url('../images/icons/envelope-solid.svg');
+    }
+    &-git::before{
+      background-image: url('../images/icons/github-brands.svg');
+    }
+    &-locate::before{
+      background-image: url('../images/icons/map-marker-alt-solid.svg');
+      height: 27px;
+    }
+  }
+  &__language-text{
+    padding-left: 25px;
+  }
+  .resume__skills-list{
+    list-style: inside;
+    margin-left: 10px;
+  }
+  &__skills-item{
+    padding: 5px 0;
+  }
+  .resume__skills-listin{
+    list-style: circle;
+    margin-left: 55px;
+  }
+}
+
+.project{
+  &__title{
+    margin-bottom: 25px;
+  }
+  &__item{
+    margin-bottom: 30px;
+  }
+  &__item-name{
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  &__item-descr{
+    margin-bottom: 10px;
+  }
+  &__item-links{
+    padding-left: 30px;
+    text-align: right;
+  }
+  &__item-box{
+    @extend %roboto-500;
+    color: grey;
+  }
+  &__item-link{
+    @extend %roboto-400;
+    font-style: italic;
+    color:#000;
+  }
+}
